@@ -15,7 +15,7 @@ package com.jaramee;
 
 
 public class JarameeConn {
-    private String msg;
+    private String msg = "";
 
     public JarameeConn(String msg_req) {
         JarameeMain test = new JarameeMain(msg_req);
@@ -23,6 +23,6 @@ public class JarameeConn {
     }
 
     public String msg_res() {
-        return msg;
+        return this.msg;
     }
 }
