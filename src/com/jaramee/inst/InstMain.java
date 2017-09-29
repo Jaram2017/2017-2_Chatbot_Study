@@ -34,6 +34,7 @@ public class InstMain {
                 if (msg_list.size() == 1) {
                     this.msg = "!날씨 A : A 의 날씨를 알려줍니다. (구현 예정)";
                 }
+                /*
                 else if (msg_list.size() == 2) {
                     Weather wth1 = new Weather(msg_list.get(1));
                     this.msg = wth1.getMsg();
@@ -42,12 +43,13 @@ public class InstMain {
                     Weather wth2 = new Weather(msg_list.get(1), msg_list.get(2));
                     this.msg = wth2.getMsg();
                 }
+                */
                 else if (msg_list.size() == 4) {
                     Weather wth3 = new Weather(msg_list.get(1), msg_list.get(2), msg_list.get(3));
                     this.msg = wth3.getMsg();
                 }
                 else {
-                    this.msg = "날씨 명령어를 정확히 입력해주세요! \n(ex: 경기도 시흥시 매화동)";
+                    this.msg = "날씨 명령어를 정확히 입력해주세요! \n(ex: 경기 시흥시 매화동)";
                 }
                 break;
             default :

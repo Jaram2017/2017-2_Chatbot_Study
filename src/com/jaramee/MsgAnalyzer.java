@@ -18,6 +18,7 @@ import java.util.List;
 
 public class MsgAnalyzer {
 
+    private String ent_msg = "";
     private String msg = "";
     private ArrayList<String> msg_str = new ArrayList<>();
     private List<String> str_list;
@@ -26,6 +27,7 @@ public class MsgAnalyzer {
     public MsgAnalyzer(String msg_in) {
         this.msg_char = msg_in.toCharArray();
         this.str_list = Arrays.asList(msg_in.split(" ")); // 띄어쓰기로 msg 분할
+        this.ent_msg = msg_in;
 
         for (char char_piece : msg_char) {
             this.msg_str.add(Character.toString(char_piece));
@@ -55,5 +57,10 @@ public class MsgAnalyzer {
     // msg 의 길이를 return
     public int getLength() {
         return this.msg_char.length;
+    }
+
+    // 해당하는 msg 전체를 get
+    public String getEntireMsg() {
+        return this.ent_msg;
     }
 }
